@@ -13,7 +13,8 @@ stages:
   jobs:  
   - job: Build
     displayName: Build
-    pool: $(AGENT_POOL_NAME)
+    pool:
+      vmImage: 'windows-latest'
     steps:
     - task: CmdLine@2
       displayName: Create .env file
